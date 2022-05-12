@@ -5,8 +5,8 @@ import os
 
 OWM_endpoint = "https://api.openweathermap.org/data/2.5/onecall"
 owm_api_key = "YOUR OPEN WEATHER MAP API KEY"
-twillo_account_sid = "YOUR TWILLO SID"
-twillo_auth_token = "YOUR TWILLO TOKEN"
+twilio_account_sid = "YOUR TWILLO SID"
+twilio_auth_token = "YOUR TWILLO TOKEN"
 
 parameters = {
     "lat": YOUR LATTITUDE,
@@ -31,7 +31,7 @@ if will_rain:
     proxy_client = TwilioHttpClient()
     proxy_client.session.proxies = {'https': os.environ['https_proxy']}
 
-    client = Client(twillo_account_sid, twillo_auth_token, http_client=proxy_client)
+    client = Client(twilio_account_sid, twilio_auth_token, http_client=proxy_client)
     message = client.messages \
         .create(
         body="It's going to rain",
